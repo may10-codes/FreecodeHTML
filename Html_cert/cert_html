@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Main title and description -->
+        <h1 id="title">Improved Developer Survey</h1>
+        <p id="description">Help us understand the developer ecosystem better!</p>
+    </header>
+
+    <main>
+        <!-- Survey form -->
+        <form id="survey-form">
+            <!-- Personal Information Section -->
+            <section class="form-section">
+                <h2>Personal Information</h2>
+                
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="number-label" for="number">Age (optional)</label>
+                    <input type="number" id="number" name="age" min="18" max="120" placeholder="Age">
+                </div>
+            </section>
+
+            <!-- Professional Information Section -->
+            <section class="form-section">
+                <h2>Professional Information</h2>
+
+                <div class="form-group">
+                    <label for="dropdown">Current Role</label>
+                    <select id="dropdown" name="role">
+                        <option value="" disabled selected>Select your current role</option>
+                        <option value="student">Student</option>
+                        <option value="junior-dev">Junior Developer</option>
+                        <option value="senior-dev">Senior Developer</option>
+                        <option value="manager">Manager</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>Years of Experience</p>
+                    <label><input type="radio" name="experience" value="0-2"> 0-2 years</label>
+                    <label><input type="radio" name="experience" value="3-5"> 3-5 years</label>
+                    <label><input type="radio" name="experience" value="6+"> 6+ years</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Preferred Technologies (Check all that apply)</p>
+                    <label><input type="checkbox" name="tech" value="javascript"> JavaScript</label>
+                    <label><input type="checkbox" name="tech" value="python"> Python</label>
+                    <label><input type="checkbox" name="tech" value="react"> React</label>
+                    <label><input type="checkbox" name="tech" value="nodejs"> Node.js</label>
+                    <label><input type="checkbox" name="tech" value="other"> Other</label>
+                </div>
+            </section>
+
+            <!-- Feedback Section -->
+            <section class="form-section">
+                <h2>Your Feedback</h2>
+                <div class="form-group">
+                    <label for="comments">Any comments or suggestions?</label>
+                    <textarea id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit">Submit Survey</button>
+        </form>
+    </main>
+</body>
+</html>
